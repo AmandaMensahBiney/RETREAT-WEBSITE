@@ -70,15 +70,17 @@
     text-align: center;
     color: var(--light-color);
     padding: 0 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 0;
     
   }
 
 
-.bloom{
-  position: relative;
-    overflow: hidden;
-}
+
+  
+ 
+ 
+  
+
   
   
   .hero h1 {
@@ -135,11 +137,14 @@
     align-items: center;
     margin: 40px 0;
     gap: 20px;
-    color: whitesmoke;
+    color: #264653;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   
   .zigzag-container.reverse {
     flex-direction: row-reverse;
+    color: #264653;
   }
   
   .zigzag-container img {
@@ -165,71 +170,123 @@
 
 
 .green{
-  background-color: #e6765a;
+  background-color: white;
   position: relative;
   overflow: hidden;
-  
+ padding-left: 0;
+ padding-top: 0;
+
   
 }
 
-.red{
+.blue{
   position: relative;
   overflow: hidden;
-  padding-top: 4rem;
+  padding-left: 0;
+ padding-top: 0;
+ background-color: #f5c8a3;
 }
 
 
+#bloom{
+  background-color: rgb(129, 209, 209);
+}
 
-  /* Cards Grid */
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
+
+  /* Benefits */
+  
+  .zigzag-container1 {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    gap: 20px;
+    color: #264653;
+    padding-left: 5%;
+    padding-right: 5%;
+    
   }
   
-  .card {
+  .zigzag-container.reverse1 {
+    flex-direction: row-reverse;
+    color: #264653;
+    
+  }
+  
+  .zigzag-container1 img {
+    width: 45%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  .zigzag-text {
+    width: 55%;
+  }
+  
+  h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+  }
+  
+  h3 {
+    margin: 0;
+    line-height: 1.6em;
+  }
+
+
+
+
+  
+  /* Venue Page Specific */
+  .venue-section {
+    background-color: #f8f9fa;
+    position: relative;
+  overflow: hidden;
+ padding-left: 0;
+ padding-top: 0;
+  }
+  
+  .venue-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exactly 2 per row */
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  
+  .venue-card {
     background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: var(--transition);
+    transition: transform 0.3s ease;
   }
   
-  .card:hover {
+  .venue-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   }
   
-  .card img {
+  .venue-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
   }
   
-  .card-content {
+  .venue-description {
     padding: 1.5rem;
   }
   
-  /* Venue Page Specific */
-  .amenities-list {
-    columns: 2;
-    list-style: none;
-    margin: 2rem 0;
-  }
-  
-  .amenities-list li {
-    padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .amenities-list li::before {
-    content: '✓';
+  .venue-description h3 {
+    margin-bottom: 0.5rem;
     color: var(--primary-color);
-    margin-right: 1rem;
-    font-weight: bold;
   }
+  
+  .venue-description p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
   
   /* Cuisine Page */
   .menu-card {
@@ -583,11 +640,17 @@
 
   .wave-divider-top {
     position: relative;
-    width: 100%;
-    height: 60px; /* smaller wave height */
+    width: 110%; /* full viewport width */
+    height: 100px; 
     overflow: hidden;
-    margin-bottom: -1px; /* closes gap perfectly */
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    z-index: 0;
+    margin-top: 0;
+    
   }
+  
   
   .wave-divider-top .wave {
     position: absolute;
@@ -596,6 +659,7 @@
     width: 100%;
     height: 100%;
   }
+  
   
   .wave-divider-top .wave1 {
     z-index: 1;

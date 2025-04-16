@@ -107,3 +107,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+  function openDay(evt, dayId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
+    tabs.forEach(t => t.classList.remove('active'));
+    buttons.forEach(b => b.classList.remove('active'));
+    document.getElementById(dayId).classList.add('active');
+    evt.currentTarget.classList.add('active');
+  }
+
